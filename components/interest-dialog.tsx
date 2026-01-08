@@ -40,7 +40,7 @@ export function InterestDialog({ open, onOpenChange }: InterestDialogProps) {
               <DialogTitle className="text-2xl">Coming Soon</DialogTitle>
               <DialogDescription className="text-base leading-relaxed pt-2">
                 We're validating interest before launch. Register now to get notified when we go live and receive{" "}
-                <span className="font-semibold text-foreground">50% off for 6 months</span>.
+                <span className="font-semibold text-foreground">25% off for 6 months</span>.
               </DialogDescription>
             </DialogHeader>
 
