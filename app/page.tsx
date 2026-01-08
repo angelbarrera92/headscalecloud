@@ -185,7 +185,7 @@ export default function LandingPage() {
                   <p className="text-muted-foreground mb-3">One command to switch control planes:</p>
                   <div className="bg-background border border-border/40 rounded-lg p-4 font-mono text-sm">
                     <code className="text-accent">
-                      tailscale up --login-server=https://your-instance.headscale.cloud
+                      tailscale up --login-server=https://your-instance.headscalecloud.qzz.io
                     </code>
                   </div>
                 </div>
