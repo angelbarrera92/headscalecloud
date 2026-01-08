@@ -17,6 +17,7 @@ import {
   BarChart3,
   MapPin,
   LineChart,
+  Radio,
 } from "lucide-react"
 
 export const metadata = {
@@ -192,8 +193,25 @@ export default function FeaturesPage() {
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Open Source, Zero Ops</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Fully auditable open-source stack (Headscale + Headplane). We host everything—you get all the
-                  transparency without the maintenance burden.
+                  Fully auditable open-source stack ({" "}
+                  <a
+                    href="https://github.com/juanfont/headscale"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent hover:underline"
+                  >
+                    Headscale
+                  </a>{" "}
+                  +{" "}
+                  <a
+                    href="https://github.com/tale/headplane"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent hover:underline"
+                  >
+                    Headplane
+                  </a>
+                  ). We host everything—you get all the transparency without the maintenance burden.
                 </p>
               </Card>
             </div>
@@ -224,6 +242,19 @@ export default function FeaturesPage() {
             </Card>
             <Card className="p-6 bg-accent/5 border-accent/20">
               <div className="p-2 bg-accent/10 rounded-lg w-fit mb-4">
+                <Radio className="h-6 w-6 text-accent" />
+              </div>
+              <div className="flex items-start justify-between mb-2">
+                <h3 className="text-lg font-semibold">Managed DERP Servers</h3>
+                <span className="text-xs font-mono px-2 py-1 bg-accent/10 text-accent rounded">Q3 2026</span>
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                DERP relay servers hosted in our infrastructure for enhanced isolation. Avoid Tailscale's default DERP
+                servers for extra privacy and control over NAT traversal.
+              </p>
+            </Card>
+            <Card className="p-6 bg-accent/5 border-accent/20">
+              <div className="p-2 bg-accent/10 rounded-lg w-fit mb-4">
                 <LineChart className="h-6 w-6 text-accent" />
               </div>
               <div className="flex items-start justify-between mb-2">
@@ -233,6 +264,19 @@ export default function FeaturesPage() {
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Direct access to logs and advanced metrics. Deep visibility into your network with custom dashboards and
                 alerting for production workloads.
+              </p>
+            </Card>
+            <Card className="p-6 bg-accent/5 border-accent/20">
+              <div className="p-2 bg-accent/10 rounded-lg w-fit mb-4">
+                <Server className="h-6 w-6 text-accent" />
+              </div>
+              <div className="flex items-start justify-between mb-2">
+                <h3 className="text-lg font-semibold">Self-Hosted DERP Servers</h3>
+                <span className="text-xs font-mono px-2 py-1 bg-accent/10 text-accent rounded">Q4 2026</span>
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Full control with your own DERP relay infrastructure. Enterprise customers can deploy DERP servers in
+                their own infrastructure for maximum isolation and compliance.
               </p>
             </Card>
           </div>

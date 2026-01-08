@@ -146,8 +146,26 @@ export default function LandingPage() {
                 <div>
                   <h3 className="text-lg font-semibold mb-2">Open Source, Managed</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Built on open-source Headscale and Headplane—fully auditable. We run everything for you, but you
-                    maintain full control and ownership of your network.
+                    Built on open-source{" "}
+                    <a
+                      href="https://github.com/juanfont/headscale"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent hover:underline"
+                    >
+                      Headscale
+                    </a>{" "}
+                    and{" "}
+                    <a
+                      href="https://github.com/tale/headplane"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent hover:underline"
+                    >
+                      Headplane
+                    </a>
+                    —fully auditable. We run everything for you, but you maintain full control and ownership of your
+                    network.
                   </p>
                 </div>
               </div>
@@ -223,20 +241,30 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="grid md:grid-cols-2 gap-4">
-              <div className="flex items-center gap-3 p-3 bg-background rounded-lg">
+              <a
+                href="https://github.com/juanfont/headscale"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-3 bg-background rounded-lg hover:bg-accent/5 transition-colors"
+              >
                 <Globe className="h-5 w-5 text-muted-foreground" />
                 <div>
                   <div className="font-semibold text-sm">Headscale</div>
                   <div className="text-xs text-muted-foreground">Open-source Tailscale control server</div>
                 </div>
-              </div>
-              <div className="flex items-center gap-3 p-3 bg-background rounded-lg">
+              </a>
+              <a
+                href="https://github.com/tale/headplane"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-3 bg-background rounded-lg hover:bg-accent/5 transition-colors"
+              >
                 <Globe className="h-5 w-5 text-muted-foreground" />
                 <div>
                   <div className="font-semibold text-sm">Headplane</div>
                   <div className="text-xs text-muted-foreground">Modern management interface</div>
                 </div>
-              </div>
+              </a>
             </div>
           </Card>
         </div>

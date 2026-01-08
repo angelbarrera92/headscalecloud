@@ -44,8 +44,8 @@ export default function PricingPage() {
 
       {/* Pricing Cards */}
       <section className="container mx-auto px-4 pb-20">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Solo Plan */}
             <Card className="p-8 bg-card border-border/40 relative">
               <div className="mb-6">
@@ -99,16 +99,84 @@ export default function PricingPage() {
               </div>
             </Card>
 
+            {/* Business Plan */}
+            <Card className="p-8 bg-card border-accent/40 relative overflow-hidden opacity-75">
+              <div className="absolute top-0 right-0 bg-muted text-muted-foreground text-xs font-semibold px-3 py-1 rounded-bl-lg">
+                Coming Q3 2026
+              </div>
+
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold mb-2">Business</h3>
+                <p className="text-sm text-muted-foreground">Enhanced isolation with managed DERP servers</p>
+              </div>
+
+              <div className="mb-6">
+                <div className="flex items-baseline gap-2 mb-2">
+                  <span className="text-5xl font-bold">€15</span>
+                  <span className="text-muted-foreground">/month</span>
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  or <span className="font-semibold text-foreground">€150/year</span> (2 months free)
+                </div>
+              </div>
+
+              <Button className="w-full mb-8" size="lg" variant="outline" disabled>
+                Coming Soon
+              </Button>
+
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Everything in Solo, plus:</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="text-sm font-semibold">Managed DERP relay servers</span>
+                    <span className="text-xs font-mono px-2 py-0.5 bg-muted text-muted-foreground rounded">Q3 2026</span>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="text-sm">Enhanced NAT traversal isolation</span>
+                    <span className="text-xs font-mono px-2 py-0.5 bg-muted text-muted-foreground rounded">Q3 2026</span>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="text-sm">Avoid Tailscale's DERP infrastructure</span>
+                    <span className="text-xs font-mono px-2 py-0.5 bg-muted text-muted-foreground rounded">Q3 2026</span>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="text-sm">Multi-region DERP coverage</span>
+                    <span className="text-xs font-mono px-2 py-0.5 bg-muted text-muted-foreground rounded">Q3 2026</span>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">Priority email support</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <span className="text-sm">99.95% uptime SLA</span>
+                </div>
+              </div>
+            </Card>
+
             {/* Enterprise Plan */}
             <Card className="p-8 bg-card border-border/40 relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-accent text-accent-foreground text-xs font-semibold px-3 py-1 rounded-bl-lg flex items-center gap-1">
-                <Sparkles className="h-3 w-3" />
+              <div className="absolute top-0 right-0 bg-muted text-muted-foreground text-xs font-semibold px-3 py-1 rounded-bl-lg">
                 Custom
               </div>
 
               <div className="mb-6">
                 <h3 className="text-2xl font-bold mb-2">Enterprise</h3>
-                <p className="text-sm text-muted-foreground">For teams with high-scale requirements</p>
+                <p className="text-sm text-muted-foreground">Maximum control and scale</p>
               </div>
 
               <div className="mb-6">
@@ -130,7 +198,21 @@ export default function PricingPage() {
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Everything in Solo, plus:</span>
+                  <span className="text-sm">Everything in Business, plus:</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="text-sm font-semibold">Self-hosted DERP servers</span>
+                    <span className="text-xs font-mono px-2 py-0.5 bg-muted text-muted-foreground rounded">Q4 2026</span>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Check className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="text-sm">Deploy DERP in your infrastructure</span>
+                    <span className="text-xs font-mono px-2 py-0.5 bg-muted text-muted-foreground rounded">Q4 2026</span>
+                  </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
@@ -142,11 +224,11 @@ export default function PricingPage() {
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Priority support</span>
+                  <span className="text-sm">24/7 priority support</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Custom SLA options</span>
+                  <span className="text-sm">Custom SLA up to 99.99%</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <Check className="h-5 w-5 text-accent mt-0.5 flex-shrink-0" />
